@@ -136,6 +136,7 @@ img, svg { max-width: 100%; }
 }
 .nav a:hover { opacity: 1; background: rgba(255,255,255,.08); }
 @media (max-width: 560px) {
+  .entete { position: static; }
   .entete__contenu { padding-top: 6px; padding-bottom: 4px; }
   .marque__texte { font-size: .95rem; }
   .nav { width: 100%; margin: 0 -10px; }
@@ -236,7 +237,8 @@ img, svg { max-width: 100%; }
 }
 
 .zoom-boutons {
-  position: absolute; right: 10px; top: 10px; display: flex; flex-direction: column; gap: 6px;
+  /* En bas à gauche : zone vide de la carte (Angola), l'Est reste dégagé */
+  position: absolute; left: 10px; bottom: 10px; display: flex; flex-direction: column; gap: 6px;
 }
 .zoom-boutons button, .bouton {
   font: inherit; color: var(--encre); background: var(--surface);
@@ -364,11 +366,15 @@ img, svg { max-width: 100%; }
     var(--surface-2);
   border-top: 1px solid var(--bord); border-bottom: 1px solid var(--bord);
 }
-.chiffres { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); margin: 18px 0 28px; }
+.chiffres { list-style: none; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); margin: 18px 0 28px; }
 .chiffre {
   background: var(--surface); border-radius: var(--rayon); padding: 14px 16px; border: 1px solid var(--bord);
 }
-.chiffre__valeur { display: block; font-family: var(--police-titre); font-size: 1.7rem; font-weight: 700; color: var(--encre); line-height: 1.1; }
+.deux-colonnes { display: grid; gap: 8px 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.gestes-cadre { margin: 18px 0 28px; }
+.gestes-cadre .gestes { columns: 2 300px; column-gap: 32px; margin: 0; }
+.gestes-cadre .gestes li { break-inside: avoid; }
+.chiffre__valeur { display: block; font-family: var(--police-titre); font-size: 1.45rem; white-space: nowrap; font-weight: 700; color: var(--encre); line-height: 1.1; }
 .chiffre__libelle { font-size: .9rem; color: var(--encre-2); }
 .chiffre:nth-child(3n+1) { border-top: 3px solid var(--bleu); }
 .chiffre:nth-child(3n+2) { border-top: 3px solid var(--jaune); }
