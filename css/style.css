@@ -277,10 +277,13 @@ img, svg { max-width: 100%; }
 }
 .panneau h3 { font-size: 1.35rem; margin-bottom: 2px; }
 .panneau__province { color: var(--encre-2); font-size: .92rem; margin-bottom: 12px; }
+.fiche-tiroir { position: relative; }
+.fiche-tiroir[hidden] { display: none; }
 .panneau__fermer {
-  display: none; position: absolute; right: 10px; top: 10px;
+  position: absolute; right: -6px; top: -6px;
   width: 36px; height: 36px; font-size: 1.3rem; line-height: 1;
 }
+.fiche h3 { padding-right: 40px; }
 .panneau__vide { color: var(--encre-2); }
 .statut-etiquette {
   display: inline-flex; align-items: center; gap: 8px; font-weight: 600;
@@ -309,22 +312,27 @@ img, svg { max-width: 100%; }
   cursor: pointer; text-align: left;
 }
 
+/* Mobile : la fiche s'ouvre en tiroir depuis le bas de l'écran */
 @media (max-width: 959px) {
-  .panneau--fiche {
+  .fiche-tiroir {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-    max-height: 72vh; overflow-y: auto; border-radius: 18px 18px 0 0;
-    padding-top: 26px; transform: translateY(105%); transition: transform .25s ease;
-    box-shadow: 0 -8px 40px rgba(0,0,0,.25);
+    max-height: 72vh; overflow-y: auto;
+    background: var(--surface); border-radius: 18px 18px 0 0;
+    padding: 30px 18px 22px; box-shadow: 0 -8px 40px rgba(0,0,0,.25);
+    animation: monter .22s ease-out;
   }
-  .panneau--fiche::before {
-    content: ""; position: absolute; top: 9px; left: 50%; width: 44px; height: 5px;
+  .fiche-tiroir::before {
+    content: ""; position: absolute; top: 10px; left: 50%; width: 44px; height: 5px;
     margin-left: -22px; border-radius: 3px; background: var(--bord);
   }
-  .panneau--fiche.ouvert { transform: translateY(0); }
-  .panneau--fiche .panneau__fermer { display: block; }
+  .fiche-tiroir .panneau__fermer { right: 10px; top: 12px; }
 }
+@keyframes monter { from { transform: translateY(40%); opacity: .4; } to { transform: none; opacity: 1; } }
+
+/* Grand écran : la fiche remplace l'accueil dans la colonne latérale */
 @media (min-width: 960px) {
   .panneau { position: sticky; top: 76px; max-height: calc(100vh - 92px); overflow-y: auto; }
+  .panneau.avec-fiche .accueil-panneau { display: none; }
 }
 
 /* ---------- Sections génériques ---------- */

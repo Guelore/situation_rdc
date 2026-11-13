@@ -7,6 +7,8 @@
   <meta name="description" content="Carte interactive et sobre de la situation sécuritaire en République Démocratique du Congo, territoire par territoire, avec sources.">
   <meta name="theme-color" content="#0b1f3a">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/carte.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
   <a class="lien-evitement" href="#carte">Aller à la carte</a>
@@ -40,6 +42,48 @@
 
     <section id="carte" class="section-carte conteneur" aria-labelledby="titre-carte">
       <h2 id="titre-carte" class="visuellement-cache">Carte de la situation par territoire</h2>
+      <div class="carte-cadre">
+        <div>
+          <div class="carte-boite">
+            <div class="carte-barre">
+              <div class="recherche">
+                <label for="choix-territoire">Territoire</label>
+                <select id="choix-territoire" disabled>
+                  <option value="">Choisir un territoire…</option>
+                </select>
+              </div>
+              <span class="maj" id="maj-donnees"></span>
+            </div>
+            <div class="carte-svg-zone" id="zone-carte">
+              <div class="carte-chargement" id="carte-chargement">Chargement de la carte…</div>
+              <div class="zoom-boutons">
+                <button type="button" data-zoom="plus" aria-label="Zoomer" title="Zoomer">+</button>
+                <button type="button" data-zoom="moins" aria-label="Dézoomer" title="Dézoomer">−</button>
+                <button type="button" data-zoom="reinit" aria-label="Revenir à la vue d'ensemble" title="Vue d'ensemble">⤢</button>
+              </div>
+              <div class="infobulle" id="infobulle" aria-hidden="true"></div>
+            </div>
+            <ul class="legende" id="legende" aria-label="Légende"></ul>
+          </div>
+          <p class="avertissement">
+            <span aria-hidden="true">⚠</span>
+            <span><strong>Information indicative.</strong> La situation évolue vite : cette carte ne remplace pas les consignes des autorités locales ni des organisations humanitaires. Vérifiez toujours la date de mise à jour de chaque zone.</span>
+          </p>
+        </div>
+
+        <aside class="panneau" id="panneau" aria-label="Détails">
+          <div class="accueil-panneau" id="accueil-panneau">
+            <h3>Comment lire la carte</h3>
+            <p class="panneau__vide">Touchez ou cliquez sur un territoire pour voir sa situation, les groupes armés présents et les sources.</p>
+            <div class="liste-zones" id="liste-zones"></div>
+          </div>
+          <div class="fiche-tiroir" id="fiche" role="dialog" aria-modal="false" aria-labelledby="fiche-titre" hidden>
+            <button type="button" class="bouton panneau__fermer" id="fiche-fermer" aria-label="Fermer la fiche">×</button>
+            <div class="fiche" id="fiche-contenu"></div>
+          </div>
+        </aside>
+      </div>
+      <noscript><p>La carte interactive nécessite JavaScript. Les sources utilisées sont listées en bas de page.</p></noscript>
     </section>
 
     <section id="actualites" class="section conteneur" aria-labelledby="titre-actualites">
