@@ -1,0 +1,7 @@
+# Dépendances et fichiers temporaires de développement
+node_modules/
+outils/tmp/
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
