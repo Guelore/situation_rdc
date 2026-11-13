@@ -1,0 +1,16 @@
+{
+  "name": "RDC · Situation sécuritaire",
+  "short_name": "RDC Sécurité",
+  "description": "Carte interactive de la situation sécuritaire en RDC, territoire par territoire.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5f0",
+  "theme_color": "#0b1f3a",
+  "icons": [
+    { "src": "icons/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icone.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

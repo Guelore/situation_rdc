@@ -135,6 +135,22 @@
     });
   }
 
+  // Mode hors-ligne : service worker et bandeau d'état de la connexion
+  function horsLigne() {
+    var bandeau = document.getElementById('hors-ligne');
+    if (!bandeau) return;
+    var maj = function () { bandeau.classList.toggle('visible', navigator.onLine === false); };
+    window.addEventListener('online', maj);
+    window.addEventListener('offline', maj);
+    maj();
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function (e) { console.warn('Service worker :', e); });
+      });
+    }
+  }
+
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', demarrer);
   else demarrer();
+  horsLigne();
 })(window.RDC = window.RDC || {});
