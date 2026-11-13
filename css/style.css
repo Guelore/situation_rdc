@@ -219,6 +219,7 @@ img, svg { max-width: 100%; }
   fill: none; stroke: var(--carte-province); stroke-width: 1.8;
   vector-effect: non-scaling-stroke; pointer-events: none;
 }
+.carte-svg .reperes { pointer-events: none; }
 .carte-svg .ville circle { fill: var(--encre); stroke: var(--surface); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .carte-svg .ville text, .carte-svg .pays {
   font: 600 11px var(--police); fill: var(--encre);
@@ -301,7 +302,7 @@ img, svg { max-width: 100%; }
 .fiche__resume { margin-bottom: 12px; }
 .fiche__sources { font-size: .9rem; padding-left: 18px; margin: 4px 0 12px; }
 .fiche__sources li { margin-bottom: 4px; }
-.fiche__titre-sources { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--encre-2); margin: 14px 0 4px; font-family: var(--police); }
+.panneau .fiche__titre-sources { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--encre-2); margin: 14px 0 4px; font-family: var(--police); }
 
 .liste-zones { margin-top: 14px; }
 .liste-zones details { border-top: 1px solid var(--bord); padding: 8px 0; }

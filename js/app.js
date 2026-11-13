@@ -80,6 +80,25 @@
     carte.surSelection(function (code) { if (select.value !== code) select.value = code; });
   }
 
+  // Résumé chiffré sous le titre : nombre de territoires par niveau grave.
+  function construireResume(liste, carte, zones) {
+    if (!liste) return;
+    var compte = {};
+    Object.keys(carte.infos).forEach(function (c) {
+      var s = RDC.statutDe(zones[c]);
+      compte[s] = (compte[s] || 0) + 1;
+    });
+    var formules = {
+      occupee: ['territoire ou ville occupé(e)', 'territoires et villes occupés'],
+      conflit: ['zone en conflit actif', 'zones en conflit actif'],
+      risque: ['zone à risque élevé', 'zones à risque élevé']
+    };
+    liste.innerHTML = ['occupee', 'conflit', 'risque'].filter(function (s) { return compte[s]; }).map(function (s) {
+      return '<li><span class="pastille pastille--' + s + '"></span><span><strong>' + compte[s] + '</strong> ' +
+        formules[s][compte[s] > 1 ? 1 : 0] + '</span></li>';
+    }).join('');
+  }
+
   function comparer(a, b) { return a.localeCompare(b, 'fr', { sensitivity: 'base' }); }
 
   function demarrer() {
@@ -101,9 +120,14 @@
       construireRecherche(document.getElementById('choix-territoire'), carte, carte.infos);
 
       var maj = document.getElementById('maj-donnees');
-      if (donnees.maj) maj.textContent = 'Mise à jour : ' + RDC.formaterDate(donnees.maj);
+      var nonVerifiees = Object.keys(zones).filter(function (c) { return zones[c].verifie === false; }).length;
+      if (donnees.maj) {
+        maj.textContent = 'Données : ' + RDC.formaterDate(donnees.maj) +
+          (nonVerifiees ? ' · en cours de vérification' : '');
+      }
 
-      if (RDC.Panneau) RDC.panneau = new RDC.Panneau(carte, zones);
+      construireResume(document.getElementById('resume-statuts'), carte, zones);
+      if (RDC.Panneau) RDC.panneau = new RDC.Panneau(carte, donnees);
     }).catch(function (err) {
       console.error(err);
       chargement.textContent = 'La carte n\'a pas pu être chargée. Vérifiez votre connexion puis rechargez la page.';

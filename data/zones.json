@@ -1,0 +1,375 @@
+{
+  "maj": "2026-06",
+  "note": "Première version préparée à partir des informations disponibles jusqu'à mi-2026. Chaque zone marquée « verifie »: false doit être vérifiée et sourcée précisément (voir docs/MISE_A_JOUR.md).",
+  "references": {
+    "ocha": { "titre": "OCHA — République démocratique du Congo", "url": "https://www.unocha.org/democratic-republic-congo" },
+    "reliefweb": { "titre": "ReliefWeb — rapports ONU et ONG sur la RDC", "url": "https://reliefweb.int/country/cod" },
+    "crisiswatch": { "titre": "International Crisis Group — CrisisWatch", "url": "https://www.crisisgroup.org/crisiswatch" },
+    "monusco": { "titre": "MONUSCO — Mission des Nations unies en RDC", "url": "https://monusco.unmissions.org/" },
+    "radiookapi": { "titre": "Radio Okapi — actualités sécuritaires", "url": "https://www.radiookapi.net/" },
+    "acled": { "titre": "ACLED — données sur les conflits armés", "url": "https://acleddata.com/" }
+  },
+  "territoires": {
+    "CD6101": {
+      "statut": "occupee",
+      "acteurs": ["M23/AFC"],
+      "resume": "Ville de Goma sous le contrôle du M23/AFC depuis fin janvier 2025, avec une administration parallèle. Situation humanitaire très grave.",
+      "depuis": "2025-01",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch", "radiookapi"]
+    },
+    "CD6102": {
+      "statut": "occupee",
+      "acteurs": ["M23/AFC"],
+      "resume": "Territoire sous le contrôle du M23/AFC. Les grands sites de déplacés autour de Goma ont été démantelés début 2025.",
+      "depuis": "2025-01",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch"]
+    },
+    "CD6103": {
+      "statut": "occupee",
+      "acteurs": ["M23/AFC", "Wazalendo", "FDLR"],
+      "resume": "Majeure partie du territoire contrôlée par le M23/AFC. Affrontements persistants avec des groupes Wazalendo dans certaines zones.",
+      "depuis": "2024",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch", "radiookapi"]
+    },
+    "CD6111": {
+      "statut": "occupee",
+      "acteurs": ["M23/AFC", "FDLR", "Wazalendo"],
+      "resume": "Territoire contrôlé en grande partie par le M23/AFC depuis 2022 (prise de Bunagana en juin 2022).",
+      "depuis": "2022-06",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch"]
+    },
+    "CD6104": {
+      "statut": "conflit",
+      "acteurs": ["M23/AFC", "Wazalendo", "NDC-R"],
+      "resume": "Ligne de front : avancée du M23/AFC vers Walikale-centre début 2025, suivie d'un retrait annoncé. Combats avec les Wazalendo dans plusieurs groupements.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch", "radiookapi"]
+    },
+    "CD6105": {
+      "statut": "conflit",
+      "acteurs": ["M23/AFC", "ADF", "Wazalendo / Maï-Maï"],
+      "resume": "Sud du territoire touché par l'avancée du M23/AFC (axe Kanyabayonga). Attaques des ADF dans l'ouest et le nord.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch", "radiookapi"]
+    },
+    "CD6107": {
+      "statut": "conflit",
+      "acteurs": ["ADF (État islamique — Afrique centrale)", "Maï-Maï"],
+      "resume": "Attaques meurtrières récurrentes des ADF contre les civils, malgré les opérations conjointes FARDC-UPDF. Chef-lieu : Oïcha.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "monusco", "radiookapi"]
+    },
+    "CD6109": {
+      "statut": "risque",
+      "acteurs": ["ADF"],
+      "resume": "Ville sous contrôle gouvernemental, mais exposée aux attaques des ADF en périphérie.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "radiookapi"]
+    },
+    "CD6110": {
+      "statut": "risque",
+      "acteurs": ["ADF", "Maï-Maï"],
+      "resume": "Ville sous contrôle gouvernemental. Afflux de déplacés et menaces de groupes armés en périphérie.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "radiookapi"]
+    },
+
+    "CD6201": {
+      "statut": "occupee",
+      "acteurs": ["M23/AFC"],
+      "resume": "Ville de Bukavu sous le contrôle du M23/AFC depuis mi-février 2025.",
+      "depuis": "2025-02",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch", "radiookapi"]
+    },
+    "CD6202": {
+      "statut": "occupee",
+      "acteurs": ["M23/AFC"],
+      "resume": "Territoire sous le contrôle du M23/AFC depuis février 2025, y compris l'aéroport de Kavumu.",
+      "depuis": "2025-02",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch"]
+    },
+    "CD6205": {
+      "statut": "occupee",
+      "acteurs": ["M23/AFC", "Wazalendo"],
+      "resume": "Contrôlé en grande partie par le M23/AFC depuis début 2025 (Minova, Kalehe-centre). Affrontements avec les Wazalendo sur les hauts plateaux.",
+      "depuis": "2025-01",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch"]
+    },
+    "CD6207": {
+      "statut": "occupee",
+      "acteurs": ["M23/AFC", "Wazalendo"],
+      "resume": "Contrôlé en grande partie par le M23/AFC (Walungu, Kamanyola), avec des poches de résistance Wazalendo.",
+      "depuis": "2025-02",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch"]
+    },
+    "CD6206": {
+      "statut": "risque",
+      "acteurs": ["M23/AFC"],
+      "resume": "Île du lac Kivu, isolée par l'occupation des rives voisines. Situation à préciser.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha"]
+    },
+    "CD6212": {
+      "statut": "conflit",
+      "acteurs": ["M23/AFC", "Wazalendo", "Twirwaneho"],
+      "resume": "Zone de front : affrontements entre le M23/AFC, les Wazalendo et les FARDC. Groupes armés présents sur les hauts plateaux.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch"]
+    },
+    "CD6208": {
+      "statut": "conflit",
+      "acteurs": ["M23/AFC", "Wazalendo", "Twirwaneho"],
+      "resume": "Plaine de la Ruzizi sur la ligne de front, forte tension autour de la ville d'Uvira. Situation très évolutive : consultez les informations les plus récentes.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch", "radiookapi"]
+    },
+    "CD6210": {
+      "statut": "conflit",
+      "acteurs": ["Twirwaneho", "Maï-Maï", "Red-Tabara"],
+      "resume": "Conflits armés et intercommunautaires sur les hauts plateaux (Minembwe) et le long du lac Tanganyika.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "crisiswatch"]
+    },
+    "CD6203": {
+      "statut": "risque",
+      "acteurs": ["Raïa Mutomboki"],
+      "resume": "Présence de factions Raïa Mutomboki et violences liées aux sites miniers.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "acled"]
+    },
+
+    "CD5405": {
+      "statut": "conflit",
+      "acteurs": ["CODECO", "Zaïre", "CRP"],
+      "resume": "Violences intercommunautaires et attaques de la CODECO, y compris contre des sites de déplacés. Très nombreux déplacés.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "monusco", "radiookapi"]
+    },
+    "CD5402": {
+      "statut": "conflit",
+      "acteurs": ["ADF", "CRP", "FRPI"],
+      "resume": "Attaques des ADF dans le sud du territoire et activisme de la CRP. Bunia, chef-lieu de l'Ituri, se trouve dans ce territoire.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "monusco", "radiookapi"]
+    },
+    "CD5403": {
+      "statut": "conflit",
+      "acteurs": ["ADF", "Maï-Maï"],
+      "resume": "Attaques des ADF le long de la route nationale 4 et dans les zones minières.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "radiookapi"]
+    },
+    "CD5407": {
+      "statut": "risque",
+      "acteurs": ["CODECO"],
+      "resume": "Incursions de la CODECO et tensions intercommunautaires.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "radiookapi"]
+    },
+    "CD5409": {
+      "statut": "vigilance",
+      "acteurs": [],
+      "resume": "Pas de conflit armé majeur signalé. Accueil de réfugiés sud-soudanais.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha"]
+    },
+
+    "CD6305": {
+      "statut": "risque",
+      "acteurs": ["ADF", "Maï-Maï"],
+      "resume": "Incursions de groupes armés signalées, y compris des ADF venus du Nord-Kivu.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "acled"]
+    },
+    "CD6309": {
+      "statut": "risque",
+      "acteurs": ["Maï-Maï Malaika"],
+      "resume": "Activisme de groupes Maï-Maï lié aux sites miniers.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["acled", "radiookapi"]
+    },
+    "CD6301": {
+      "statut": "vigilance",
+      "acteurs": [],
+      "resume": "Ville sous contrôle gouvernemental. Afflux de déplacés venus des provinces voisines.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha"]
+    },
+
+    "CD7406": {
+      "statut": "risque",
+      "acteurs": ["Maï-Maï", "Milices communautaires"],
+      "resume": "Groupes armés actifs et tensions intercommunautaires dans une zone minière (lithium).",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "acled"]
+    },
+    "CD7410": {
+      "statut": "risque",
+      "acteurs": ["Milices communautaires", "Maï-Maï"],
+      "resume": "Violences intercommunautaires récurrentes et déplacements de population.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha"]
+    },
+    "CD7402": {
+      "statut": "risque",
+      "acteurs": ["Maï-Maï", "Milices communautaires"],
+      "resume": "Insécurité dans les zones rurales. La ville de Kalemie est sous contrôle gouvernemental.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha"]
+    },
+    "CD7404": {
+      "statut": "vigilance",
+      "acteurs": ["Maï-Maï"],
+      "resume": "Incidents ponctuels liés à des groupes Maï-Maï.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["acled"]
+    },
+
+    "CD7108": {
+      "statut": "risque",
+      "acteurs": ["Maï-Maï Bakata Katanga"],
+      "resume": "Activisme de groupes Maï-Maï dans la zone dite du « triangle de la mort » (Mitwaba–Manono–Pweto).",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "acled"]
+    },
+    "CD7109": {
+      "statut": "risque",
+      "acteurs": ["Maï-Maï Bakata Katanga"],
+      "resume": "Présence de groupes Maï-Maï et incidents dans les zones rurales.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["acled"]
+    },
+    "CD7305": {
+      "statut": "risque",
+      "acteurs": ["Maï-Maï Bakata Katanga"],
+      "resume": "Incursions de groupes Maï-Maï signalées.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["acled"]
+    },
+    "CD7101": { "statut": "calme", "acteurs": [], "resume": "Ville sous contrôle gouvernemental, sans conflit armé notable. Criminalité urbaine ponctuelle.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD7106": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD7102": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD7105": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD7104": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+
+    "CD3307": {
+      "statut": "conflit",
+      "acteurs": ["Milice Mobondo"],
+      "resume": "Violences liées au conflit foncier entre communautés teke et yaka depuis juin 2022. Attaques de la milice Mobondo contre des villages.",
+      "depuis": "2022-06",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "radiookapi"]
+    },
+    "CD3311": {
+      "statut": "risque",
+      "acteurs": ["Milice Mobondo"],
+      "resume": "Extension des violences liées à la milice Mobondo.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "radiookapi"]
+    },
+    "CD3202": {
+      "statut": "risque",
+      "acteurs": ["Milice Mobondo"],
+      "resume": "Attaques de la milice Mobondo signalées dans plusieurs localités.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "radiookapi"]
+    },
+    "CD3102": {
+      "statut": "risque",
+      "acteurs": ["Milice Mobondo"],
+      "resume": "Attaques de la milice Mobondo signalées dans le territoire.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "radiookapi"]
+    },
+    "CD1000": {
+      "statut": "vigilance",
+      "acteurs": ["Milice Mobondo (Maluku)", "Banditisme urbain"],
+      "resume": "Incursions de la milice Mobondo signalées dans la commune rurale de Maluku, et criminalité urbaine.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["radiookapi"]
+    },
+
+    "CD5207": {
+      "statut": "risque",
+      "acteurs": ["Milices locales", "Groupes armés transfrontaliers"],
+      "resume": "Violences intercommunautaires et présence de groupes armés venus de Centrafrique.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["ocha", "acled"]
+    },
+    "CD5111": {
+      "statut": "risque",
+      "acteurs": ["Maï-Maï", "ADF"],
+      "resume": "Incursions de groupes armés et violences liées aux sites miniers.",
+      "maj": "2026-06",
+      "verifie": false,
+      "sources": ["acled"]
+    },
+    "CD5101": { "statut": "calme", "acteurs": [], "resume": "Ville sous contrôle gouvernemental, sans conflit armé notable.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+
+    "CD7202": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD7203": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD7205": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD7206": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD7207": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+
+    "CD2001": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2002": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2003": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2005": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2007": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2009": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2010": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2011": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2013": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2015": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2017": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] },
+    "CD2019": { "statut": "calme", "acteurs": [], "resume": "Pas de conflit armé notable signalé.", "maj": "2026-06", "verifie": false, "sources": ["reliefweb"] }
+  }
+}
