@@ -44,7 +44,7 @@
     var pts = [];
     indices.forEach(function (i, k) {
       var a = i < 0 ? arcs[~i].slice().reverse() : arcs[i];
-      pts = pts.concat(k === 0 ? a : a.slice(1));
+      for (var j = k === 0 ? 0 : 1; j < a.length; j++) pts.push(a[j]);
     });
     return pts;
   }
@@ -80,12 +80,10 @@
 
   function arrondir(v) { return Math.round(v * 10) / 10; }
 
-  function cheminDepuisPoints(pts, proj, fermer) {
+  // Points déjà projetés et arrondis -> chemin SVG
+  function cheminDepuisPoints(pts, fermer) {
     var d = '';
-    for (var i = 0; i < pts.length; i++) {
-      var p = proj.projeter(pts[i][0], pts[i][1]);
-      d += (i === 0 ? 'M' : 'L') + arrondir(p[0]) + ' ' + arrondir(p[1]);
-    }
+    for (var i = 0; i < pts.length; i++) d += (i === 0 ? 'M' : 'L') + pts[i][0] + ' ' + pts[i][1];
     return fermer ? d + 'Z' : d;
   }
 
@@ -110,6 +108,13 @@
     var arcs = decoderArcs(topo);
     var proj = creerProjection(arcs);
     this.proj = proj;
+    // Chaque arc n'est projeté qu'une fois (les arcs sont partagés entre territoires voisins)
+    arcs = arcs.map(function (arc) {
+      return arc.map(function (p) {
+        var q = proj.projeter(p[0], p[1]);
+        return [arrondir(q[0]), arrondir(q[1])];
+      });
+    });
     var geoms = topo.objects.territoires.geometries;
 
     var svg = el('svg', {
@@ -142,9 +147,8 @@
       polygones(g).forEach(function (poly) {
         poly.forEach(function (ring) {
           var pts = anneau(ring, arcs);
-          d += cheminDepuisPoints(pts, proj, true);
-          pts.forEach(function (pt) {
-            var q = proj.projeter(pt[0], pt[1]);
+          d += cheminDepuisPoints(pts, true);
+          pts.forEach(function (q) {
             if (q[0] < minx) minx = q[0]; if (q[0] > maxx) maxx = q[0];
             if (q[1] < miny) miny = q[1]; if (q[1] > maxy) maxy = q[1];
           });
@@ -173,7 +177,7 @@
     var dProv = '', dFront = '';
     Object.keys(usage).forEach(function (idx) {
       var u = usage[idx];
-      var d = cheminDepuisPoints(arcs[idx], proj, false);
+      var d = cheminDepuisPoints(arcs[idx], false);
       if (u.length === 1) dFront += d;
       else if (u[0] !== u[1]) dProv += d;
     });

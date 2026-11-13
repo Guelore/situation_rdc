@@ -287,6 +287,7 @@ img, svg { max-width: 100%; }
   width: 36px; height: 36px; font-size: 1.3rem; line-height: 1;
 }
 .fiche h3 { padding-right: 40px; }
+#fiche-titre:focus { outline: none; } /* focus déplacé pour les lecteurs d'écran */
 .panneau__vide { color: var(--encre-2); }
 .statut-etiquette {
   display: inline-flex; align-items: center; gap: 8px; font-weight: 600;

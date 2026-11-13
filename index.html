@@ -63,9 +63,9 @@
             <div class="carte-svg-zone" id="zone-carte">
               <div class="carte-chargement" id="carte-chargement">Chargement de la carte…</div>
               <div class="zoom-boutons">
-                <button type="button" data-zoom="plus" aria-label="Zoomer" title="Zoomer">+</button>
-                <button type="button" data-zoom="moins" aria-label="Dézoomer" title="Dézoomer">−</button>
-                <button type="button" data-zoom="reinit" aria-label="Revenir à la vue d'ensemble" title="Vue d'ensemble">⤢</button>
+                <button type="button" data-zoom="plus" title="Zoomer"><span aria-hidden="true">+</span><span class="visuellement-cache">Zoomer</span></button>
+                <button type="button" data-zoom="moins" title="Dézoomer"><span aria-hidden="true">−</span><span class="visuellement-cache">Dézoomer</span></button>
+                <button type="button" data-zoom="reinit" title="Vue d'ensemble"><span aria-hidden="true">⤢</span><span class="visuellement-cache">Revenir à la vue d'ensemble</span></button>
               </div>
               <div class="infobulle" id="infobulle" aria-hidden="true"></div>
             </div>
@@ -84,7 +84,7 @@
             <div class="liste-zones" id="liste-zones"></div>
           </div>
           <div class="fiche-tiroir" id="fiche" role="dialog" aria-modal="false" aria-labelledby="fiche-titre" hidden>
-            <button type="button" class="bouton panneau__fermer" id="fiche-fermer" aria-label="Fermer la fiche">×</button>
+            <button type="button" class="bouton panneau__fermer" id="fiche-fermer" title="Fermer"><span aria-hidden="true">×</span><span class="visuellement-cache">Fermer la fiche</span></button>
             <div class="fiche" id="fiche-contenu"></div>
           </div>
         </aside>
