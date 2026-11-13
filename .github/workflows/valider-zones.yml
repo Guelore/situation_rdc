@@ -1,0 +1,18 @@
+# Vérifie data/zones.json à chaque modification (aucun déploiement ici).
+name: Validation des zones
+
+on:
+  push:
+    paths: ['data/**', 'outils/valider-zones.mjs']
+  pull_request:
+    paths: ['data/**', 'outils/valider-zones.mjs']
+
+jobs:
+  valider:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node outils/valider-zones.mjs

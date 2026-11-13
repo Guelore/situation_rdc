@@ -28,6 +28,7 @@
   RDC.formaterDate = function (iso) {
     if (!iso) return '';
     var parties = String(iso).split('-');
+    if (parties.length === 1) return parties[0];
     try {
       var d = new Date(Date.UTC(+parties[0], (+parties[1] || 1) - 1, +parties[2] || 1));
       var options = parties.length >= 3
